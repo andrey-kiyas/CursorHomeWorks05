@@ -9,9 +9,14 @@
 
     <context:property-placeholder location="classpath:XMLConfig.properties"/>
 
-    <bean id="calc" name="calculator" class="HomeWork05.XMLConfig.Calculator">
+    <bean id="calculator" class="HomeWork05.XMLConfig.Calculator">
+        <property name="minusService" ref="minusService"/>
+        <property name="plusService" ref="plusService"/>
         <property name="a" value="${calculator.a}"/>
         <property name="b" value="${calculator.b}"/>
     </bean>
+
+    <bean id="minusService" class="HomeWork05.XMLConfig.MinusService"/>
+    <bean id="plusService" class="HomeWork05.XMLConfig.PlusService"/>
 
 </beans>

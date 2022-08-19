@@ -1,6 +1,16 @@
 package HomeWork05.XMLConfig;
 
 public class Calculator {
+    private MinusService minusService;
+    private PlusService plusService;
+
+    public void setMinusService(MinusService minusService) {
+        this.minusService = minusService;
+    }
+
+    public void setPlusService(PlusService plusService) {
+        this.plusService = plusService;
+    }
 
     private int a;
     private int b;
@@ -23,9 +33,9 @@ public class Calculator {
 
     public void getCalc() {
         if (a > b) {
-            System.out.println("Calculator (a = " + a + ", b = " + b + "): " + MinusService.calcMinus(getA(), getB()));
+            System.out.println("Calculator (a = " + a + ", b = " + b + "): " + minusService.calcMinus(getA(), getB()));
         } else {
-            System.out.println("Calculator (a = " + a + ", b = " + b + "): " + PlusService.calcPlus(getA(), getB()));
+            System.out.println("Calculator (a = " + a + ", b = " + b + "): " + plusService.calcPlus(getA(), getB()));
         }
     }
 }
