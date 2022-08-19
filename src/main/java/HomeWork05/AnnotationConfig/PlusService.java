@@ -1,8 +1,11 @@
 package HomeWork05.AnnotationConfig;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PlusService {
 
-    static int calcPlus(int a, int b){
+    public int calcPlus(int a, int b){
         return a + b;
     }
 }
